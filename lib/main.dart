@@ -1,5 +1,7 @@
+import 'package:courses/model/modelCategories.dart';
 import 'package:courses/util/colors.dart';
 import 'package:courses/view/home.dart';
+import 'package:courses/view/myCourses.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'util/strings.dart';
@@ -18,30 +20,20 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   int _index = 0;
   List view = [
-   home(),
-    Center(
-        child: Text(
-      "aaaaaaaaaaaaaaaaaaa123",
-      style: TextStyle(fontSize: 50),
-    )),
-    Center(
-        child: Text(
-      "qqqqqqqqqqqqqqqqqqqq",
-      style: TextStyle(fontSize: 50),
-    )),
-    Center(
-        child: Text(
-      "rrrrrrrrrrrrrrrrrr",
-      style: TextStyle(fontSize: 50),
-    )),
+   home(item),
+   myCourses(),
+    home(item),
+   home(item),
   ];
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        home:        
-        Scaffold(
+        home:         
+      
+      Scaffold(
+        backgroundColor:ThemeColors.amber,
             body: view[_index],
             bottomNavigationBar: Container(
                 decoration: BoxDecoration(
@@ -54,7 +46,7 @@ class _MyAppState extends State<MyApp> {
                      _index = index;
                      view[index];
                     
-                    });
+                  });
                   },
                   color: ThemeColors.white,
                   activeColor: ThemeColors.blue,
@@ -63,21 +55,21 @@ class _MyAppState extends State<MyApp> {
                     GButton(
                       icon: Icons.home,
                       backgroundColor: ThemeColors.white,
-                      text: UiStrings.myFavorite,
-                      iconSize: 15,
+                      text: UiStrings.home,
+                      iconSize: 10,
                       textStyle: const TextStyle(fontSize: 8),
                     ),
                     GButton(
                       icon: Icons.person,
-                      text: UiStrings.home,
+                      text: UiStrings.myCourses,
                       backgroundColor: ThemeColors.white,
                       iconSize: 15,
-                      textStyle: const TextStyle(fontSize: 12),
+                      textStyle: const TextStyle(fontSize: 8),
                     ),
                     GButton(
                       icon: Icons.play_circle,
                       backgroundColor: ThemeColors.white,
-                      text: UiStrings.myCourses,
+                      text: UiStrings.personal,
                       textSize: 2,
                       iconSize: 15,
                       textStyle: const TextStyle(fontSize: 8),
@@ -86,9 +78,12 @@ class _MyAppState extends State<MyApp> {
                         icon: Icons.favorite,
                         backgroundColor: ThemeColors.white,
                         iconSize: 15,
-                        text: UiStrings.personal,
+                        text: UiStrings.myFavorite,
                         textStyle: const TextStyle(fontSize: 8))
                   ],
-                ))));
+                ))
+           ));
+ 
+      
   }
 }

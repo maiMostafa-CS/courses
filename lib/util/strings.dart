@@ -9,6 +9,7 @@ class UiStrings {
   static const String sales = "Sales";
   static const String hr = "HR";
   static const String account = "Account";
+   static const String code = "Code";
   static const String trendingCourses = "Trending Courses";
    static const String uiUx = "UI/UX Design";
   static const String donNorman = "Don Norman";

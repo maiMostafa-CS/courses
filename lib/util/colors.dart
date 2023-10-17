@@ -8,5 +8,5 @@ class ThemeColors {
   static Color green = const Color.fromARGB(255, 10, 146, 5);
   static Color yellow = const Color.fromARGB(181, 212, 159, 2);
   static Color shadow = const Color.fromARGB(85, 24, 24, 23);
-  static Color amber = const Color.fromARGB(83, 236, 202, 163);
+  static Color amber = Color.fromARGB(248, 243, 209, 157);
 }
