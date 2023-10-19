@@ -1,16 +1,15 @@
-import 'package:courses/util/strings.dart';
-import 'package:percent_indicator/percent_indicator.dart';
-
 class Courses {
   final String picCourses;
   final String picInstructor;
-  final String name;
-  final String  percentText;
+  final String nameCourses;
+  final String percentText;
   final double percent;
+  final String nameInstructor;
   Courses(
-     {required this.picCourses,
+      {required this.picCourses,
       required this.picInstructor,
-      required this.name,
+      required this.nameCourses,
+      required this.nameInstructor,
       required this.percentText,
       required this.percent});
 }

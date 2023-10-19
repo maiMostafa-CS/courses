@@ -1,10 +1,9 @@
-import 'package:courses/model/modelCategories.dart';
 import 'package:courses/util/colors.dart';
-import 'package:courses/view/coursesDetails.dart';
-import 'package:courses/view/home.dart';
+import 'package:courses/view/home/home.dart';
 import 'package:courses/view/myCourses.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'common/gButton.dart';
 import 'util/strings.dart';
 
 void main() {
@@ -21,10 +20,10 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   int _index = 0;
   List view = [
-   home(item),
+   home(),
+   myCourses(),  
+   home(),
    myCourses(),
-     CoursesDetails(),
-   home(item),
   ];
 
   @override
@@ -54,34 +53,10 @@ class _MyAppState extends State<MyApp> {
                   activeColor: ThemeColors.blue,
                   gap: 10,
                   tabs: [
-                    GButton(
-                      icon: Icons.home,
-                      backgroundColor: ThemeColors.white,
-                      text: UiStrings.home,
-                      iconSize: 10,
-                      textStyle: const TextStyle(fontSize: 8),
-                    ),
-                    GButton(
-                      icon: Icons.person,
-                      text: UiStrings.myCourses,
-                      backgroundColor: ThemeColors.white,
-                      iconSize: 15,
-                      textStyle: const TextStyle(fontSize: 8),
-                    ),
-                    GButton(
-                      icon: Icons.play_circle,
-                      backgroundColor: ThemeColors.white,
-                      text: UiStrings.personal,
-                      textSize: 2,
-                      iconSize: 15,
-                      textStyle: const TextStyle(fontSize: 8),
-                    ),
-                    GButton(
-                        icon: Icons.favorite,
-                        backgroundColor: ThemeColors.white,
-                        iconSize: 15,
-                        text: UiStrings.myFavorite,
-                        textStyle: const TextStyle(fontSize: 8))
+                     gButton(Icons.home,UiStrings.home),
+                gButton(Icons.person, UiStrings.myCourses),
+                gButton(Icons.play_circle_outline_outlined,  UiStrings.personal),                                        
+                   gButton(Icons.favorite,  UiStrings.myFavorite), 
                   ],
                 ))
            ));

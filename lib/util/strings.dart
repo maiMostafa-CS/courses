@@ -28,4 +28,9 @@ class UiStrings {
  static const String designThinkind = "Design Thinking";
  static const String time2 = "01:20";
  static const String enrollNow = "ENROLL NOW - \$425";
+ static const String nameInstructor1 = "MOstafa";
+ static const String nameInstructor2 =  "Ahmed";
+ static const String nameInstructor3 = "aya";
+ static const String nameInstructor4 = "Mesawer";
+ static const String nameInstructor5 =  "Tarerk";
 }
