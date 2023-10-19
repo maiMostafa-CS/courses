@@ -7,57 +7,27 @@ List<Courses> courses = [
   Courses(
       picCourses: "assets/download (5).jpg",
       picInstructor: "assets/person(1).jpg",
-      name: UiStrings.uiUx,percent: CircularPercentIndicator(radius: 35,
-lineWidth: 7,
-percent:.75 ,
-progressColor: ThemeColors.green,
-center: const Text("75%",style: TextStyle(fontSize: 15),),
-
-)
+      name: UiStrings.uiUx,percent:.75 ,percentText: "%75"
   ),
   Courses(
       picCourses: "assets/download (1).jpg",
       picInstructor: "assets/person(1).jpg",
-      name: UiStrings.hr,percent: CircularPercentIndicator(radius: 35,
-lineWidth: 7,
-percent:.5 ,
-progressColor: ThemeColors.green,
-center: const Text("50%",style: TextStyle(fontSize: 15),),
-
-)
+      name: UiStrings.hr,percent:.5 ,percentText: "%50"
   ),
   Courses(
       picCourses: "assets/download (4).jpg",
       picInstructor: "assets/person(1).jpg",
-      name: UiStrings.account,percent: CircularPercentIndicator(radius: 35,
-lineWidth: 7,
-percent:.6 ,
-progressColor:ThemeColors.green,
-center: const Text("60%",style: TextStyle(fontSize: 15),),
-
-)
+      name: UiStrings.account,percent:.40 ,percentText: "%40"
   ),
   Courses(
       picCourses: "assets/download (3).jpg",
       picInstructor: "assets/person(1).jpg",
-      name: UiStrings.code,percent: CircularPercentIndicator(radius: 35,
-lineWidth: 7,
-percent:.25 ,
-progressColor:ThemeColors.green,
-center: const Text("25%",style: TextStyle(fontSize: 15),),
-
-)
+      name: UiStrings.code,percent:.90 ,percentText: "%90"
   ),
   Courses(
       picCourses: "assets/download (2).jpg",
       picInstructor: "assets/person(1).jpg",
-      name: UiStrings.code,percent: CircularPercentIndicator(radius: 35,
-lineWidth: 7,
-percent:.50 ,
-progressColor:ThemeColors.green,
-center: const Text("50%",style: TextStyle(fontSize: 15),),
-
-)
+      name: UiStrings.code,percent:.25 ,percentText: "%25"
   )
 ];
 Widget myCourses() {
@@ -120,12 +90,7 @@ Container(
                                           fontWeight: FontWeight.w500,
                                           fontSize: 15),
                                     ),
-                                     Text(
-                                   "${courses[index].percent} ",
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.w500,
-                                          fontSize: 15),
-                                    ),
+                             
                                   ],
                                 ),
                                 Row(children: [
@@ -145,6 +110,14 @@ Container(
                                         fontWeight: FontWeight.w500,
                                         fontSize: 10),
                                   ),
+                                 const SizedBox(width:120,),
+                                    CircularPercentIndicator(radius: 25,
+lineWidth: 7,
+percent:courses[index].percent ,
+progressColor: ThemeColors.green,
+center: Text(courses[index].percentText,style: const TextStyle(fontSize: 15),),)
+                              
+                              
                                 ]),
                               ],
                             ))

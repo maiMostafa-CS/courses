@@ -10,52 +10,23 @@ List<Courses> courses = [
   Courses(
       picCourses: "assets/download (5).jpg",
       picInstructor: "assets/person(1).jpg",
-      name: UiStrings.uiUx,percent: CircularPercentIndicator(radius: 35,
-lineWidth: 7,
-percent:.75 ,
-progressColor: ThemeColors.green,
-center: const Text("75%",style: TextStyle(fontSize: 15),),
-
-)),
+      name: UiStrings.uiUx,percent:.75 ,percentText: "%75"),
   Courses(
       picCourses: "assets/download (1).jpg",
       picInstructor: "assets/person(1).jpg",
-      name: UiStrings.hr,percent: CircularPercentIndicator(radius: 35,
-lineWidth: 7,
-percent:.75 ,
-progressColor: ThemeColors.green,
-center: const Text("75%",style: TextStyle(fontSize: 15),),
-
-)),
+      name: UiStrings.hr,percent:.75 ,percentText: "%75"),
   Courses(
       picCourses: "assets/download (4).jpg",
       picInstructor: "assets/person(1).jpg",
-      name: UiStrings.account,percent: CircularPercentIndicator(radius: 35,
-lineWidth: 7,
-percent:.75 ,
-progressColor: ThemeColors.green,
-center: const Text("75%",style: TextStyle(fontSize: 15),),
-
-)),
+      name: UiStrings.account,percent:.75 ,percentText: "%75"),
   Courses(
       picCourses: "assets/download (3).jpg",
       picInstructor: "assets/person(1).jpg",
-      name: UiStrings.code,percent: CircularPercentIndicator(radius: 35,
-lineWidth: 7,
-percent:.75 ,
-progressColor: ThemeColors.green,
-center: const Text("75%",style: TextStyle(fontSize: 15),),
-
-)),
+      name: UiStrings.code,percent:.75 ,percentText: "%75"),
   Courses(
       picCourses: "assets/download (2).jpg",
       picInstructor: "assets/person(1).jpg",
-      name: UiStrings.code,percent:CircularPercentIndicator(radius: 35,
-lineWidth: 7,
-percent:.75 ,
-progressColor: ThemeColors.green,
-center: const Text("75%",style: TextStyle(fontSize: 15),),
-      )
+      name: UiStrings.code,percent:.75 ,percentText: "%75"
 )
 ];
 Widget home(item) {

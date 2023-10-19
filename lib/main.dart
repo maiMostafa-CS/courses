@@ -1,5 +1,6 @@
 import 'package:courses/model/modelCategories.dart';
 import 'package:courses/util/colors.dart';
+import 'package:courses/view/coursesDetails.dart';
 import 'package:courses/view/home.dart';
 import 'package:courses/view/myCourses.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +23,7 @@ class _MyAppState extends State<MyApp> {
   List view = [
    home(item),
    myCourses(),
-    home(item),
+     CoursesDetails(),
    home(item),
   ];
 
@@ -33,8 +34,10 @@ class _MyAppState extends State<MyApp> {
         home:         
       
       Scaffold(
-        backgroundColor:ThemeColors.amber,
-            body: view[_index],
+       backgroundColor: ThemeColors.amber,
+            body:Container(child: view[_index]
+            ,)
+                ,
             bottomNavigationBar: Container(
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(50),
@@ -44,8 +47,7 @@ class _MyAppState extends State<MyApp> {
                   onTabChange: (index) {
                     setState(() {
                      _index = index;
-                     view[index];
-                    
+                     view[index];                    
                   });
                   },
                   color: ThemeColors.white,
